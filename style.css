@@ -224,6 +224,50 @@ header nav {
   transform: translateY(-5px);
 }
 
+.partners{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.partners-wrapper{
+  width: 100%;
+  margin-top: 40px;
+  
+}
+.partner-item{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  background:#fee600;
+  border-radius: 5px;
+  color:#4b4a4a;
+  margin: 10px;
+  width:200px;
+  height: 100px;
+}
+.partner-item span{
+  margin: 0 auto;
+}
+.partner-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.partner-item:not(:first-child){
+  margin-left: 20px;
+}
+.partners-wrapper{
+  display:flex;
+  align-content: center;
+  justify-content: center;
+}
+
+.partners h1{
+  text-align: center;
+}
+
 @media only screen and (max-width: 1280px) {
   .hero-text-box h1 {
     font-size: 2rem;
