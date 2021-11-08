@@ -458,6 +458,9 @@ header nav {
   font-size: 2rem;
 }
 
+.section-header {
+  transform: translateY(-10px);
+}
 .testimonials-wrapper {
   display: flex;
   flex-wrap: wrap;
