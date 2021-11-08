@@ -13,6 +13,19 @@ a {
   text-decoration: none;
   color: inherit;
 }
+body::-webkit-scrollbar {
+  width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #4b4a4a;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(180, 180, 180);
+  border-radius: 7px;
+  border: 3px solid #4b4a4a;
+}
 .wrapper {
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -224,48 +237,286 @@ header nav {
   transform: translateY(-5px);
 }
 
-.partners{
+.partners {
   margin-top: 20px;
   display: flex;
   flex-direction: column;
+
   width: 100%;
 }
-.partners-wrapper{
-  width: 100%;
+.partners-wrapper {
+  position: relative;
+  width: 90%;
   margin-top: 40px;
-  
+  overflow: hidden;
+  overflow-y: auto;
+  align-self: center;
 }
-.partner-item{
+
+.list-arrow {
+  display: none;
+  position: absolute;
+  text-align: center;
+  padding-top: 10px;
+  font-size: 24px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: #4b4a4a;
+  color: #fff;
+  z-index: 2;
+  top: 50px;
+  cursor: pointer;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+}
+.left-arrow {
+  box-shadow: -40px 2px 30px 70px #ffffff;
+  left: 0;
+}
+.right-arrow {
+  box-shadow: 40px 2px 30px 70px #ffffff;
+  right: 0;
+}
+.partner-item {
   display: flex;
-  justify-content: center;
-  align-content: center;
-  background:#fee600;
+  background: #fee600;
   border-radius: 5px;
-  color:#4b4a4a;
+  color: #4b4a4a;
   margin: 10px;
-  width:200px;
+  width: 200px;
   height: 100px;
+  -webkit-box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.61);
+  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.61);
 }
-.partner-item span{
+.partner-item img {
+  width: 80%;
+  margin: auto;
+}
+.partner-item span {
   margin: 0 auto;
+  align-self: center;
 }
-.partner-list{
+.partner-list {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
+  padding: 20px 0;
+  transform: translateY(0);
+  transition: transform 300ms ease-in-out;
 }
-.partner-item:not(:first-child){
+.partner-item:not(:first-child) {
   margin-left: 20px;
 }
-.partners-wrapper{
-  display:flex;
+.partners-wrapper {
+  display: flex;
   align-content: center;
   justify-content: center;
 }
 
-.partners h1{
+.partners h1 {
   text-align: center;
+}
+
+.values {
+  position: relative;
+  margin-top: 40px;
+  height: auto;
+  width: 100%;
+  background: url("./fundovalue.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+}
+.value-content {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  padding-bottom: 10%;
+}
+.value-content h1,
+.value-content span {
+  text-align: center;
+  margin: 20px;
+}
+
+.value-content h1 {
+  font-size: 2rem;
+}
+.value-content span {
+  font-size: 1.5rem;
+}
+.value-content hr {
+  width: 65%;
+  text-align: center;
+  margin: 10px auto;
+}
+.value-content .hero-text-btn {
+  align-self: center;
+  margin-top: 20px;
+  color: #4b4a4a;
+  background: #fff;
+  cursor: pointer;
+  z-index: 3;
+  border: 1px solid #fff;
+}
+.qualities {
+  padding: 0 100px;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  align-self: center;
+}
+
+.quality-item {
+  height: 15rem;
+  width: 15rem;
+  border-radius: 5px;
+  background: #fff;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: #4b4a4a;
+}
+.quality-item span {
+  font-size: 1rem;
+}
+.icon {
+  padding-top: 20px;
+  text-align: center;
+}
+.icon svg {
+  width: 40%;
+}
+
+#head-curve {
+  transform: translateY(-5px);
+}
+
+.bottom-curve {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transform: translateY(5px);
+}
+
+.combustivel {
+  margin: 40px 100px;
+  display: flex;
+  flex-direction: column;
+}
+.black {
+  background: #4b4a4a;
+  color: #fff;
+  text-align: center;
+}
+.customer {
+  padding: 0;
+  justify-content: space-evenly;
+}
+.combustivel-text-wrapper {
+  width: 80%;
+  align-self: center;
+  padding: 20px;
+}
+.combustivel-text-wrapper h1 {
+  font-size: 2rem;
+}
+.combustivel-text-wrapper p {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  text-align: justify;
+}
+.combustivel a {
+  align-self: center;
+  margin-top: 20px;
+}
+
+.testimonials {
+  background: #fee600;
+  text-align: center;
+}
+
+.testimony {
+  position: relative;
+  height: 15rem;
+  width: 18rem;
+  border-radius: 5px;
+  background: #4b4a4a;
+  margin: 50px 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+  padding: 10px;
+}
+
+.testimonials h1 {
+  margin-top: 40px;
+  font-size: 2rem;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 80%;
+  margin: 40px auto 0 auto;
+}
+.testimony-head img {
+  width: 40%;
+  height: auto;
+  border-radius: 50%;
+  position: absolute;
+  left: 0px;
+  top: -50px;
+}
+
+.testimony-head span {
+  display: block;
+}
+
+.profile-name {
+  font-size: 1.2rem;
+}
+.profile-role {
+  margin-top: 10px;
+  font-size: 0.8rem;
+}
+
+.testimony-footer {
+  align-self: flex-end;
+}
+
+.testimony-head {
+  text-align: right;
+}
+.footer {
+  background: #4b4a4a;
+  height: 100vh;
+}
+@media only screen and (max-width: 1920px) {
+  .quality-item {
+    width: 20rem;
+    height: 20rem;
+  }
+}
+@media only screen and (max-width: 1600px) {
+  .quality-item {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+@media only screen and (max-width: 1440px) {
+  .qualities {
+    padding: 0;
+  }
+  .partner-item {
+    width: 150px;
+    height: 80px;
+  }
 }
 
 @media only screen and (max-width: 1280px) {
@@ -276,6 +527,10 @@ header nav {
   .hero-text-box p {
     margin-bottom: 40px;
     font-size: 1.4rem;
+  }
+
+  .testimonials-wrapper {
+    width: auto;
   }
 }
 
@@ -291,23 +546,35 @@ header nav {
   .submenu li {
     margin-bottom: 10px;
   }
-}
-
-/* @media only screen and (max-width: 976px) {
-  .hero-text-box h1 {
-    font-size: 1.5rem;
-    margin-bottom: 20px;
+  .qualities {
+    padding: 0;
+    width: 80%;
   }
-  .hero-text-box p {
-    margin-bottom: 40px;
+  .quality-item {
+    width: 12rem;
+    height: 12rem;
+  }
+  .list-arrow {
+    display: block;
+  }
+  .customer {
+    width: auto;
+  }
+
+  .testimony {
+    height: 11rem;
+    width: 14rem;
+  }
+  .profile-name {
     font-size: 1rem;
   }
-  .hero-text-btn {
-    font-size: 0.8rem;
-    margin: 0 5px;
-    padding: 2px 5px;
+
+  .profile-role {
+    margin-top: 0;
+    font-size: 0.7rem;
   }
-} */
+}
+
 @media only screen and (max-width: 976px) {
   header img {
     width: 80px;
@@ -366,6 +633,7 @@ header nav {
     height: 26px;
     padding-top: 3px;
     width: 35px;
+    -webkit-tap-highlight-color: transparent;
   }
 
   .find-btn a svg {
@@ -378,6 +646,10 @@ header nav {
   }
   .submenu li {
     margin-bottom: 10px;
+  }
+
+  .combustivel {
+    margin: 40px 50px;
   }
 }
 
@@ -399,6 +671,17 @@ header nav {
   .submenu li {
     margin-bottom: 10px;
   }
+  .qualities {
+    padding: 0;
+  }
+
+  .quality-item {
+    width: 10rem;
+    height: 10rem;
+  }
+  .quality-item span {
+    font-size: 0.8rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {
@@ -418,6 +701,22 @@ header nav {
   }
   .submenu li {
     margin-bottom: 10px;
+  }
+  .partner-item {
+    width: 130px;
+    height: 70px;
+  }
+  .partner-item img {
+    width: 80%;
+    height: auto;
+  }
+
+  .list-arrow {
+    height: 30px;
+    width: 30px;
+    font-size: 16px;
+    padding-top: 5px;
+    top: 40px;
   }
 }
 @media only screen and (max-width: 674px) {
@@ -506,5 +805,71 @@ header nav {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+
+  .quality-item {
+    width: 8rem;
+    height: 8rem;
+    margin: 10px;
+  }
+  .quality-item span {
+    font-size: 0.7rem;
+    margin: 5px;
+  }
+  .icon svg {
+    width: 30%;
+  }
+  .icon {
+    padding: 0;
+  }
+
+  .value-content h1,
+  .combustivel-text-wrapper h1 {
+    font-size: 1.5rem;
+  }
+  .value-content span,
+  .combustivel-text-wrapper p {
+    font-size: 1rem;
+  }
+
+  .combustivel {
+    margin: 40px 0px;
+  }
+
+  .testimonials h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  .qualities {
+    width: auto;
+  }
+  .quality-item {
+    margin: 10px;
+    width: 8rem;
+    height: 8rem;
+  }
+  .value-content span {
+    font-size: 1rem;
+  }
+  .quality-item span {
+    font-size: 0.7rem;
+  }
+  .value-content hr {
+    width: 80%;
+  }
+
+  .black {
+    margin: 10px;
+    width: auto;
+    height: 10rem;
+  }
+  .combustivel-text-wrapper {
+    margin: 20px 0;
+    padding: 0;
+  }
+  .combustivel {
+    margin: 40px 5px;
   }
 }
